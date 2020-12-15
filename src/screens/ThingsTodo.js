@@ -5,7 +5,6 @@ import TodoList from "../components/TodoList";
 export default function ThingsTodo() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>TodoList</Text>
       <View style={styles.listContainer}>
         <TodoList />
       </View>
@@ -16,10 +15,10 @@ export default function ThingsTodo() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 200,
+    paddingTop: 30,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-end",
   },
   title: {
     fontWeight: "bold",
@@ -32,6 +31,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   listContainer: {
-    height: 300,
+    height: 250,
   },
 });

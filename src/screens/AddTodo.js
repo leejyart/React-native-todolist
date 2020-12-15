@@ -34,7 +34,7 @@ export default function AddTodo() {
           value={todoText}
         />
         <TouchableOpacity onPress={handleAddTodo}>
-          <Text style={styles.text}>추가</Text>
+          <Text style={styles.text}>추가 +</Text>
         </TouchableOpacity>
       </View>
     </>
@@ -43,28 +43,31 @@ export default function AddTodo() {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: 0,
+    backgroundColor: "white",
     flex: 1,
     flexDirection: "row",
-    backgroundColor: "#fff",
-    alignItems: "center",
     justifyContent: "center",
+    marginBottom: 30,
   },
   textInput: {
-    fontSize: 12,
-    width: 200,
-    height: 30,
-    borderWidth: 0.5,
+    textAlign: "center",
+    fontSize: 15,
+    width: 250,
+    height: 40,
+    borderWidth: 1,
     borderColor: "gray",
     marginRight: 16,
     borderRadius: 8,
     paddingLeft: 8,
   },
   text: {
-    fontSize: 12,
-    borderWidth: 0.1,
-    borderColor: "gray",
-    borderRadius: 5,
-    padding: 5,
-    // backgroundColor: "lightgrey",
+    marginTop: 3,
+    fontWeight: "bold",
+    fontSize: 15,
+    color: "white",
+    backgroundColor: "#C3262F",
+    borderRadius: 10,
+    padding: 8,
   },
 });

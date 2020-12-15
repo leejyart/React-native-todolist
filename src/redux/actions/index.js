@@ -15,3 +15,8 @@ export const removeTodo = (id) => ({
   type: "REMOVE_TODO",
   id,
 });
+
+export const doneTodo = (id) => ({
+  type: "DONE_TODO",
+  id,
+});

@@ -15,22 +15,39 @@ export default function TodoItem({ todo }) {
   };
 
   return (
-    <View style={styles.container}>
+    <View
+      style={{
+        ...styles.container,
+        backgroundColor: todo?.done ? "gray" : "#33BCB4",
+      }}
+    >
+      <Text
+        style={{
+          paddingLeft: 30,
+          paddingBottom: 3,
+          fontSize: 30,
+          color: "white",
+        }}
+      >
+        ▸
+      </Text>
       <TouchableOpacity onPress={handleToggle}>
         <Text
           style={{
             textDecorationLine: todo?.done ? "line-through" : "none",
-            paddingTop: 10,
+            paddingTop: 5,
             paddingRight: 20,
-            color: "grey",
-            fontSize: 15,
+            paddingLeft: 15,
+            color: "white",
+            fontSize: 20,
+            fontWeight: "bold",
           }}
         >
           {todo.text}
         </Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={handleRemove}>
-        <Text style={styles.text}>삭제</Text>
+        <Text style={styles.text}>DELETE✖️</Text>
       </TouchableOpacity>
     </View>
   );
@@ -38,21 +55,34 @@ export default function TodoItem({ todo }) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 9,
+    width: 300,
+    height: 40,
     flexDirection: "row",
     justifyContent: "space-between",
+    backgroundColor: "#33BCB4",
+    opacity: 0.9,
+    marginBottom: 10,
+    alignContent: "center",
+    borderRadius: 10,
   },
   button: {
-    marginTop: 10,
-    backgroundColor: "lightgrey",
-    borderRadius: 5,
-    height: 20,
-    width: 50,
+    backgroundColor: "white",
+    marginTop: 7,
+    marginRight: 10,
+    borderColor: "white",
+    borderWidth: 1,
+    borderRadius: 10,
+    height: 25,
+    width: 60,
     textAlign: "center",
   },
   text: {
     textAlign: "center",
-    color: "white",
+    color: "black",
+    marginLeft: 5,
     marginTop: 5,
     fontSize: 10,
+    fontWeight: "bold",
   },
 });
